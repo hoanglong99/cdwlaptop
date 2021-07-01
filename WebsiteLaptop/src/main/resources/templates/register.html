@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/fragments/fragments :: html_head" />
+<body>
+<div class="page">
+    <!-- Header -->
+        	<header th:replace="/fragments/header :: html_header" />
+    
+ <!-- end header --> 
+  <!-- Navbar -->
+    		<nav th:replace="/fragments/menu :: html_menu" />
+  
+ <!-- end nav --> 
+  <section class="main-container col1-layout">
+    <div class="main container">
+      <div class="account-login">
+        <div class="page-title">
+          <h2 align="center">Đăng ký tài khoản</h2>
+        </div>
+        <fieldset  class="col2-set">
+          <div class="col-1 new-users">
+            <img src="images/blog-img1.jpg" width="100%"></img>
+          </div>
+          <form action="#" th:action="@{/register-user}"  method="post">
+          <div  class="col-2 registered-users">
+            <div class="content">
+              <ul class="form-list">
+                <li>
+                  <label for="email">Tên đăng nhập<span class="required">*</span></label>
+                  <br>
+                  <input type="text" title="Email Address" class="input-text required-entry" id="email" value="" name="username" >
+                </li>
+                <li>
+                  <label for="pass">Nhập mật khẩu <span class="required">*</span></label>
+                  <br>
+                  <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="password" >
+                </li>
+                <li>
+                  <label for="pass">Nhập lại mật khẩu <span class="required">*</span></label>
+                  <br>
+                  <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="confirm_cpassword" >
+                </li>
+              </ul>
+              <p class="required"></p>
+              <div class="buttons-set">
+                <button id="send2" name="send" type="submit" class="button login"><span>Đăng Ký</span></button>
+                <button id="send2" name="send" type="button" class="button login"><span>Đăng Nhập</span></button>
+
+              </div>
+          </div>
+          </div>
+     </form>
+        </fieldset>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </section>
+  <!-- Footer -->
+    		<footer th:replace="/fragments/footer :: html_footer" />
+  
+  <!-- End Footer --> 
+</div>
+
+<!-- JavaScript --> 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+</body>
+
+</html>

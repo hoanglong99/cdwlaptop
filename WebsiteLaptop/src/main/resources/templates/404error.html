@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/fragments :: html_head" />
+<body>
+<div class="page"> 
+  <!-- Header -->
+  		<header th:replace="fragments/header :: html_header" />
+  
+ <!-- end header --> 
+  <!-- Navbar -->
+  		<nav th:replace="fragments/menu :: html_menu" />
+  
+  <!-- end nav --> 
+  <!--End main-container -->
+  <section class="content-wrapper">
+    <div class="container">
+      <div class="std">
+        <div class="page-not-found">
+          <h2>404</h2>
+          <h3><img src="images/signal.png">Yều cầu của bạn không cho phép truy cập trang </h3>
+          <div><a href="index.html" type="button" class="btn-home"><span>Vui lòng quay về trang chủ</span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--End main-container --> 
+  <!-- Footer -->
+  		<footer th:replace="fragments/footer :: html_footer" />
+ <!-- End Footer --> 
+</div>
+
+<!-- JavaScript --> 
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
+ 
+<script type="text/javascript" src="js/common.js"></script> 
+<script type="text/javascript" src="js/owl.carousel.min.js"></script> 
+<script type="text/javascript" src="js/cloud-zoom.js"></script>
+</body>
+
+<!-- Mirrored from htmldemo.magikcommerce.com/ecommerce/inspire-html-template/digital/404error.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Aug 2015 08:06:01 GMT -->
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/fragments :: html_head" />
+<body>
+<div class="page">
+    <!-- Header -->
+    	<header th:replace="/fragments/header :: html_header" />
+  <!-- end header --> 
+  <!-- Navbar -->
+  		<nav th:replace="/fragments/menu :: html_menu" />
+ <!-- end nav --> 
+  <section class="main-container col1-layout">
+    <div class="main container">
+      <div class="account-login">
+        <div class="page-title">
+          <h2>Login or Create an Account</h2>
+        </div>
+        <fieldset class="col2-set">
+          <legend>Login or Create an Account</legend>
+          <div class="col-1 new-users"><strong>New Customers</strong>
+            <div class="content">
+              <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+              <div class="buttons-set">
+                <button onclick="window.location='http://demo.magentomagik.com/computerstore/customer/account/create/';" class="button create-account" type="button"><span>Create an Account</span></button>
+              </div>
+            </div>
+          </div>
+          <form th:action="@{/login}" method="POST">
+          <div class="col-2 registered-users"><strong>Đăng nhập </strong>
+            <div class="content">
+              <p>Nếu bạn chưa có tài khoản?<a href="#">Đăng ký tại đây</a></p>
+              <ul class="form-list">
+                <li>
+                  <label for="email">Email Address <span class="required" th:if="${param.error}"></span></label>
+                  <br>
+                  <input type="text" title="Email Address" class="input-text required-entry" id="txtUsername" name="username">
+                </li>
+                <li>
+                  <label for="pass">Password <span class="required" th:if="${param.logout}"></span></label>
+                  <br>
+                  <input type="password" title="Password" class="input-text required-entry validate-password" id="password" name="password">
+                </li>
+              </ul>
+              <p class="required">*</p>
+              <div class="buttons-set">
+                <button id="send2" name="send" type="submit" class="button login"><span>Đăng Nhập</span></button>
+                <a class="forgot-word" href="http://demo.magentomagik.com/computerstore/customer/account/forgotpassword/">Forgot Your Password?</a> </div>
+            </div>
+          </div>
+     </form>
+        </fieldset>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </section>
+  <!-- Footer -->
+  		<footer th:replace="/fragments/footer :: html_footer" />
+  
+  <!-- End Footer --> 
+</div>
+<!-- JavaScript --> 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+</body>
+</html>
